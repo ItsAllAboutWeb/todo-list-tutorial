@@ -2,36 +2,21 @@
 
 In this chapter we will write a whole new component. It will allow us to add an item to the todo list. It will be composed of the HTML elements `input` and `button`. We will call it Input-Button-Unit.
 
-We'll use the Angular CLI to generate all the needed files and boilerplate for us. The Angular CLI takes commands in a terminal window. This doesn't mean that we have to stop the process `ng serve`. Instead, we can open another terminal window or tab and run the additional commands from there. The changes will be reflected immediately in the browser.
-
-Open another terminal tab and run:
-
-```text
-ng g c input-button-unit
-```
-
 {% hint style="info" %}
 **StackBlitz Instructions** ![](/.gitbook/assets/stackblitz-hint.svg)
 
 We'll use the Angular Generator to create a component. Follow the instructions on the [StackBlitz instructions](stackblitz.md) page and return here to continue the worksheet.
 {% endhint %}
 
-As we've seen before, `ng` is the command for using the Angular CLI. `g` is a shorthand for `generate`. `c` is a shorthand for `component`. `input-button-unit` is the name we give to the component.
 
-So the long version of the command is \(don't run it\):
 
-```text
-ng generate component input-button-unit
-```
+Let's take a look of what the StackBlitz Generator created for us.
 
-Let's take a look of what the Angular CLI created for us.
-
-It created a new folder called `src/app/input-button-unit`. There are three files there \(or four if you're not using inline-template\):
+It created a new folder called `src/app/input-button-unit`. There are three files there:
 
 * `input-button-unit.component.css` - this is where the style that's specific to the component will be placed.
-* `input-button-unit.component.spec.ts` - this is a file for testing the component. We will not deal with it in this tutorial.
 * `input-button-unit.component.ts` - this is the component file where we will define its logic.
-* `input-button-unit.component.html` - this is the HTML template file, if you're not using inline-template.
+* `input-button-unit.component.html` - this is the HTML template file.
 
 Open the file `input-button-unit.component.ts`. You can see that the Angular CLI has generated the component's configuration for us, including its selector, which is the name we gave preceded by the prefix `app`, and a default template:
 
@@ -51,17 +36,15 @@ Open the file `input-button-unit.component.ts`. You can see that the Angular CLI
 
 We can use this component as-is and see the result!
 
-Open the root component file, `app.component.ts` and add the app-input-button-unit tag inside the template \(remember we refactored the root component to have an inline template\):
+Open the root component file, `app.component.ts` and add the app-input-button-unit tag inside the template:
 
 {% code title="src/app/app.component.ts" %}
 ```markup
-template: `
   <h1>
     Welcome to {{ title }}!
   </h1>
 
   <app-input-button-unit></app-input-button-unit>
-`,
 ```
 {% endcode %}
 
@@ -82,12 +65,10 @@ Next, add an interpolation of the title member in the template:
 
 {% code title="src/app/input-button-unit/input-button-unit.component.ts" %}
 ```markup
-template: `
   <p>
     input-button-unit works!
     The title is: {{ title }}
   </p>
-`,
 ```
 {% endcode %}
 

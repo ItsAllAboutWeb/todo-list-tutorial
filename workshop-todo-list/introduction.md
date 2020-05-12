@@ -12,7 +12,7 @@ By the end of this tutorial, you'll have a ready todo-list application, that sho
 
 The list is saved in the browser's local storage. All the changes will remain even when you refresh the browser or even turn off your computer \(as long as you use the same browser on the same computer and not in private mode\).
 
-![](../.gitbook/assets/todo-app-final%20%281%29.gif)
+![](../.gitbook/assets/todo-app-final-1.gif)
 
 You will even publish the application on the Web, so that others can use it!
 

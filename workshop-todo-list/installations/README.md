@@ -1,4 +1,4 @@
-# StackBlitz instructions
+# \#1: ⌛ Installations
 
 Every developer needs a set of tools and libraries to start working. In our case, we'll use the online editor [StackBlitz](https://stackblitz.com/).
 

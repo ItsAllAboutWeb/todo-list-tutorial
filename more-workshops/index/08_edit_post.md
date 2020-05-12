@@ -31,9 +31,7 @@ Now put the code inside `BlogComponent` class as shown at [https://github.com/An
 
 Open [`src/app/components/blog/blog.component.html`](https://github.com/AnkitSharma-007/blogsite/blob/master/src/app/components/blog/blog.component.html) and replace what is there with the code shown below.
 
-## {{postData.title}}
-
- {{postData.createdDate \| date:'longDate'}}
+## 
 
 Finally we will add styling for `BlogComponent`. Open `src/app/components/blog/blog.component.scss` and replace what is there with the style definitions shown at [https://github.com/AnkitSharma-007/blogsite/blob/master/src/app/components/blog/blog.component.scss](https://github.com/AnkitSharma-007/blogsite/blob/master/src/app/components/blog/blog.component.scss)
 

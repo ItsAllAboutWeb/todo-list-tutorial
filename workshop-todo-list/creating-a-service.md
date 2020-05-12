@@ -189,19 +189,11 @@ ngOnInit() {
 You don't need to change anything in the template since we're assigning the list to the same property we used before. Seems like nothing has changed, but you can check that the list comes from the service by changing it from there \(adding an item, changing a title, etc.\).
 
 {% hint style="info" %}
-💾 **Save your code to GitHub**
-
-StackBlitz users - press **Save** in the toolbar and continue to the next section of the tutorial.
-
-Commit all your changes by running this command in your project directory.
-```text
-git add -A && git commit -m "Your Message"
-```
-
-Push your changes to GitHub by running this command in your project directory.
-```text
-git push master
-```
+💾 **Save your code**  
+  
+You can just press `Ctrl + S`\(On Windows\) or `Cmd + S`\(On Mac.\)  
+  
+Press **Save** in the toolbar and continue to the next section of the tutorial.
 {% endhint %}
 
 {% hint style="success" %}

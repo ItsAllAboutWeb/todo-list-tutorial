@@ -1,4 +1,4 @@
-# \#3 HTTP in diagrams
+# \#3 http in diagrams
 
 Now that you have a server connected to your database, we have the necessary pieces to power up the Todo List app. We can access the todo list items from anywhere by having a centralized storage, the database. But, how do we use the database we created to get the data?
 

@@ -19,7 +19,7 @@ Commit your changes by running this command in your project directory.
 git add -A && git commit -m "Your Message"
 ```
 
-Then run the following command to push the changes 
+Then run the following command to push the changes
 
 ```text
 git push -u origin master

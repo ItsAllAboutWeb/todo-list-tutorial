@@ -18,15 +18,13 @@ Use the Angular Generator to create the component, then make the component [use 
 * You can keep the title in app-root, and give it a nice value.
 * Be careful not to change the list manager component's class name!
 
+{% tabs %}
+{% tab title="TypeScript" %}
 {% code title="src/app/app.component.ts" %}
 ```typescript
 @Component({
   selector: 'app-root',
-  template: `
-    <h1>
-      Welcome to {{ title }}!
-    </h1>
-  `,
+  templateUrl: `./app.component.html`,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
@@ -34,7 +32,21 @@ export class AppComponent {
 }
 ```
 {% endcode %}
+{% endtab %}
 
+{% tab title="HTML" %}
+{% code title="src/app/app.component.html" %}
+```
+<h1>
+    Welcome to {{ title }}!
+</h1>
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab title="TypeScript" %}
 {% code title="src/app/list-manager/list-manager.component.ts" %}
 ```typescript
 import { Component, OnInit } from '@angular/core';
@@ -42,15 +54,7 @@ import { TodoItem } from '../interfaces/todo-item';
 
 @Component({
   selector: 'app-list-manager',
-  template: `
-    <app-input-button-unit (submit)="addItem($event)"></app-input-button-unit>
-
-    <ul>
-      <li *ngFor="let todoItem of todoList">
-        <app-todo-item [item]="todoItem"></app-todo-item>
-      </li>
-    </ul>
-  `,
+  templateUrl: `./list-manager.component.html`,
   styleUrls: ['./list-manager.component.css']
 })
 export class ListManagerComponent implements OnInit {
@@ -74,37 +78,45 @@ export class ListManagerComponent implements OnInit {
 }
 ```
 {% endcode %}
+{% endtab %}
+
+{% tab title="HTML" %}
+{% code title="src/app/list-manager/list-manager.component.html" %}
+```
+<app-input-button-unit 
+  (submit)="addItem($event)">
+</app-input-button-unit>
+
+<ul>
+  <li *ngFor="let todoItem of todoList">
+    <app-todo-item [item]="todoItem"></app-todo-item>
+  </li>
+</ul>
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 * Call the new component from the `app-root` template:
 
-{% code title="src/app/app.component.ts" %}
+{% code title="src/app/app.component.html" %}
 ```markup
-  template: `
-    <h1>
-      Welcome to {{ title }}!
-    </h1>
+<h1>
+    Welcome to {{ title }}!
+</h1>
 
-    <app-list-manager></app-list-manager>
-  `,
+<app-list-manager></app-list-manager>
 ```
 {% endcode %}
 
 That's it! Now we can go on.
 
 {% hint style="info" %}
-💾 **Save your code to GitHub**
-
-StackBlitz users - press **Save** in the toolbar and continue to the next section of the tutorial.
-
-Commit all your changes by running this command in your project directory.
-```text
-git add -A && git commit -m "Your Message"
-```
-
-Push your changes to GitHub by running this command in your project directory.
-```text
-git push master
-```
+💾 **Save your code**  
+  
+You can just press `Ctrl + S`\(On Windows\) or `Cmd + S`\(On Mac.\)  
+  
+Press **Save** in the toolbar and continue to the next section of the tutorial.
 {% endhint %}
 
 {% hint style="success" %}

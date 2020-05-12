@@ -27,7 +27,7 @@ To create a new project on firebase follow the steps mentioned below.
 * Click on the “Web” icon on the page.
 * Provide a nickname for your app and click on “Register app”. 
 * Copy the `firebaseConfig` object from the `<script>` tag.
-* Paste  the following code into 📝`src/environments/environment.ts`
+* Paste the following code into 📝`src/environments/environment.ts`
 
   ```text
   export const environment = {

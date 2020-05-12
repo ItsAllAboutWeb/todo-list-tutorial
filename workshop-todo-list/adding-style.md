@@ -9,7 +9,7 @@ Angular gives us different style encapsulation methods, but we'll stick to the d
 The Angular CLI has generated a general stylesheet for us at `src/style.scss`. Paste the following code into this file:
 
 {% code title="src/style.scss" %}
-```scss
+```css
 html, body, div, span,
 h1, p, ul, li {
   padding: 0;
@@ -86,24 +86,23 @@ We added style directly to elements \(`html, body, div, span, h1, p, ul, li`\) w
 
 In `app-root` add the class `app-title` to the `h1` element:
 
-{% code title="src/app/app.component.ts" %}
+{% code title="src/app/app.component.html" %}
 ```markup
-template: `
-  <h1 class="app-title">
-    Welcome to {{ title }}!
-  </h1>
+<h1 class="app-title">
+  Welcome to {{ title }}!
+</h1>
 
-  <app-list-manager></app-list-manager>
-`,
+<app-list-manager></app-list-manager>
 ```
 {% endcode %}
 
 In `input-button-unit` add the `btn` class to the `button` element:
 
-{% code title="src/app/input-button-unit/input-button-unit.component.ts" %}
+{% code title="src/app/input-button-unit/input-button-unit.component.html" %}
 ```markup
-<button class="btn"
-        (click)="submitValue(inputElementRef.value)">
+<button
+  class="btn"
+  (click)="submitValue(inputElementRef.value)">
   Save
 </button>
 ```
@@ -114,7 +113,7 @@ Now we'll add some component-specific styles.
 Add the following style to `input-button-unit.component.scss`:
 
 {% code title="src/app/input-button-unit/input-button-unit.component.scss" %}
-```scss
+```css
 .todo-input {
   padding: 4px 10px 4px;
   font-size: 16px;
@@ -139,19 +138,20 @@ The selector :host is applied to the element that holds this component - `<app-i
 
 We need to add the `todo-input` class to the `input` element:
 
-{% code title="src/app/input-button-unit/input-button-unit.component.ts" %}
+{% code title="src/app/input-button-unit/input-button-unit.component.html" %}
 ```markup
-<input class="todo-input"
-       #inputElementRef
-       [value]="title"
-       (keyup.enter)="submitValue($event.target.value)">
+<input 
+  class="todo-input"
+  #inputElementRef
+  [value]="title"
+  (keyup.enter)="submitValue($event.target.value)">
 ```
 {% endcode %}
 
 Now let's add style specifically to the `list-manager` component. Open the file `list-manager.component.scss` and paste the following style inside:
 
 {% code title="src/app/list-manager/list-manager.component.scss" %}
-```scss
+```css
 .todo-app {
   position: relative;
   width: 400px;
@@ -196,26 +196,29 @@ Now let's add style specifically to the `list-manager` component. Open the file 
 
 We'll wrap the content of this component with a `<div>` element with the `todo-app` class.
 
-{% code title="src/app/list-manager/list-manager.component.ts" %}
+{% code title="src/app/list-manager/list-manager.component.html" %}
 ```markup
-template: `
-  <div class="todo-app">
-    <app-input-button-unit (submit)="addItem($event)"></app-input-button-unit>
+<div class="todo-app">
+  <app-input-button-unit 
+    (submit)="addItem($event)">
+  </app-input-button-unit>
 
-    <ul>
-      <li *ngFor="let todoItem of todoList">
-        <app-todo-item [item]="todoItem"></app-todo-item>
-      </li>
-    </ul>
-  </div>
-`,
+  <ul>
+    <li 
+      *ngFor="let todoItem of todoList">
+      <app-todo-item 
+        [item]="todoItem">
+      </app-todo-item>
+    </li>
+  </ul>
+</div>
 ```
 {% endcode %}
 
 Finally, add the following style to `todo-item.component.scss`:
 
 {% code title="src/app/todo-item/todo-item.component.scss" %}
-```scss
+```css
 .todo-item {
   padding: 10px 0;
   border-top: solid 1px #ddd;
@@ -252,19 +255,11 @@ You can change the style as you wish - the size of elements, the colors - howeve
 Note: You can use [SCSS](https://www.freecodecamp.org/news/the-complete-guide-to-scss-sass-30053c266b23/) files in the project, which is a nicer way to write style. It has great features that help the developer. SCSS files are compiled to CSS when the project is built.
 
 {% hint style="info" %}
-💾 **Save your code to GitHub**
-
-StackBlitz users - press **Save** in the toolbar and continue to the next section of the tutorial.
-
-Commit all your changes by running this command in your project directory.
-```text
-git add -A && git commit -m "Your Message"
-```
-
-Push your changes to GitHub by running this command in your project directory.
-```text
-git push master
-```
+💾 **Save your code**  
+  
+You can just press `Ctrl + S`\(On Windows\) or `Cmd + S`\(On Mac.\)  
+  
+Press **Save** in the toolbar and continue to the next section of the tutorial.
 {% endhint %}
 
 {% hint style="success" %}

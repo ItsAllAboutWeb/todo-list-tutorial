@@ -44,9 +44,7 @@ In the following section, we will build a local storage service that will be use
 
 As in earlier chapters, we will generate the service using the Angular CLI. We will name the new service `storage`
 
-```bash
-ng g s services/storage
-```
+![](../.gitbook/assets/creating-the-storage-service.gif)
 
 {% hint style="info" %}
 **StackBlitz Instructions** ![](../.gitbook/assets/stackblitz-hint.svg)
@@ -283,19 +281,11 @@ export class TodoListService {
 In this chapter we learned what local storage is and how to use it. We saw that `localStorage` is a great and a pretty straight-forward tool for developers to store data locally on the users' computers/devices. We then implemented a new service that uses `localStorage` to store data, which our `TodoListService` uses to save the todo-list items.
 
 {% hint style="info" %}
-💾 **Save your code to GitHub**
-
-StackBlitz users - press **Save** in the toolbar and continue to the next section of the tutorial.
-
-Commit all your changes by running this command in your project directory.
-```text
-git add -A && git commit -m "Your Message"
-```
-
-Push your changes to GitHub by running this command in your project directory.
-```text
-git push master
-```
+💾 **Save your code**  
+  
+You can just press `Ctrl + S`\(On Windows\) or `Cmd + S`\(On Mac.\)  
+  
+Press **Save** in the toolbar and continue to the next section of the tutorial.
 {% endhint %}
 
 {% hint style="success" %}

@@ -52,17 +52,16 @@ submitValue(newTitle: string) {
 ```
 {% endcode %}
 
-{% code title="src/app/input-button-unit/input-button-unit.component.ts" %}
+{% code title="src/app/input-button-unit/input-button-unit.component.html" %}
 ```markup
-template: `
-  <input #inputElementRef
-         [value]="title"
-         (keyup.enter)="submitValue($event.target.value)">
+<input
+  #inputElementRef
+  [value]="title"
+  (keyup.enter)="submitValue($event.target.value)">
 
-  <button (click)="submitValue(inputElementRef.value)">
-    Save
-  </button>
-`,
+<button (click)="submitValue(inputElementRef.value)">
+  Save
+</button>
 ```
 {% endcode %}
 
@@ -70,9 +69,11 @@ template: `
 
 Now all we need to do is catch the event in the parent component and attach logic to it. Go to the `app-root` component and bind to the `submit` event in the `<app-input-button-unit>` component:
 
-{% code title="src/app/app.component.ts" %}
+{% code title="src/app/app.component.html" %}
 ```markup
-<app-input-button-unit (submit)="addItem($event)"></app-input-button-unit>
+<app-input-button-unit 
+  (submit)="addItem($event)">
+</app-input-button-unit>
 ```
 {% endcode %}
 
@@ -99,19 +100,11 @@ addItem(value: string) {
 {% endcode %}
 
 {% hint style="info" %}
-💾 **Save your code to GitHub**
+💾 **Save your code**
 
-StackBlitz users - press **Save** in the toolbar and continue to the next section of the tutorial.
+You can just press `Ctrl + S`\(On Windows\) or `Cmd + S`\(On Mac.\)
 
-Commit all your changes by running this command in your project directory.
-```text
-git add -A && git commit -m "Your Message"
-```
-
-Push your changes to GitHub by running this command in your project directory.
-```text
-git push master
-```
+Press **Save** in the toolbar and continue to the next section of the tutorial.
 {% endhint %}
 
 {% hint style="success" %}

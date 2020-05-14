@@ -6,18 +6,23 @@ Let's add an HTML input element and make its control text reflect the value of t
 
 We'll revert the component to its state before our experiments with its methods:
 
+```markup
+src/app/input-button-unit/input-button-unit.component.html
+<p>
+  input-button-unit works!
+  The title is: {{ title }}
+</p>
+```
+
+
+
 {% code title="src/app/input-button-unit/input-button-unit.component.ts" %}
 ```typescript
 import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-input-button-unit',
-  template: `
-    <p>
-      input-button-unit works!
-      The title is: {{ title }}
-    </p>
-  `,  
+  templateUrl: './input-button-unit.component.html',  
   styleUrls: ['./input-button-unit.component.css']  
 })    
 export class InputButtonUnitComponent implements OnInit {
@@ -33,9 +38,8 @@ export class InputButtonUnitComponent implements OnInit {
 
 Let's add an input element and a button to the template:
 
-{% code title="src/app/input-button-unit/input-button-unit.component.ts" %}
+{% code title="src/app/input-button-unit/input-button-unit.component.html" %}
 ```markup
-template: `
   <p>
     input-button-unit works!
     The title is: {{ title }}
@@ -43,7 +47,7 @@ template: `
 
   <input>
   <button>Save</button>
-`,
+
 ```
 {% endcode %}
 
@@ -53,7 +57,7 @@ What if we want to show the title value inside the HTML input control itself?
 
 Every `input` element has an attribute called `value`, which holds the string that is displayed inside the `input` box. In HTML, we can pass a string directly to the element's `value` attribute:
 
-{% code title="src/app/input-button-unit/input-button-unit.component.ts" %}
+{% code title="src/app/input-button-unit/input-button-unit.component.html" %}
 ```markup
 <input value="Hello World">
 ```
@@ -63,7 +67,7 @@ But we lose the dynamic binding between the properties in the controller and the
 
 Angular lets us bind properties to the template easily and conveniently; we saw that with interpolation. Now we'll see how to bind to an **element's property** \(not to be confused with class properties\). **We surround the wanted property with square brackets and pass it the class member**:
 
-{% code title="src/app/input-button-unit/input-button-unit.component.ts" %}
+{% code title="src/app/input-button-unit/input-button-unit.component.html" %}
 ```markup
 <input [value]="title">
 ```
@@ -87,7 +91,7 @@ generateTitle(): string {
 
 Replace one or both of the bindings of the title in the template with the method call \(don't forget the parenthesis!\):
 
-{% code title="src/app/input-button-unit/input-button-unit.component.ts" %}
+{% code title="src/app/input-button-unit/input-button-unit.component.html" %}
 ```markup
   <input [value]="generateTitle()">
 
@@ -125,7 +129,7 @@ The expressions that we can bind to in the template are not limited to class pro
 
 Using regular JavaScript, we can insert the value to the input via its properties. We'll fetch the element from the DOM and assign the value of the member `title` to the element's `value` property.
 
-{% code title="code for example" %}
+{% code title="// code for example" %}
 ```typescript
 let inputElement = document.getElementById('my-input');
 inputElement.value = this.title;
@@ -134,7 +138,7 @@ inputElement.value = this.title;
 
 In JavaScript, we find the `input` element in the DOM by its id, and then set its `value` property to the value of the title property. We need to add the id to the `input` element then:
 
-{% code title="code for example" %}
+{% code title="// code for example" %}
 ```markup
 <input id="my-input">
 ```
@@ -143,24 +147,6 @@ In JavaScript, we find the `input` element in the DOM by its id, and then set it
 This will work in the browser.
 
 However, **this is highly discouraged in Angular. You should never access the DOM directly!** That's because you can assign different renderers to Angular and run the application on different platforms. They may be renderers for mobile, desktop, or even a robot. These platforms will not have a `document` object from which you can manipulate the result!
-
-{% hint style="info" %}
-💾 **Save your code to GitHub**
-
-StackBlitz users - press **Save** in the toolbar and continue to the next section of the tutorial.
-
-Commit all your changes by running this command in your project directory.
-
-```text
-git add -A && git commit -m "Your Message"
-```
-
-Push your changes to GitHub by running this command in your project directory.
-
-```text
-git push master
-```
-{% endhint %}
 
 {% hint style="success" %}
 [See the results on StackBlitz](https://stackblitz.com/github/ng-girls/todo-list-tutorial/tree/master/examples/06-property-binding)

@@ -6,7 +6,7 @@ To get your development environment going, follow these steps:
 
 1. Register for a free account on [GitHub](https://github.com/).
 2. StackBlitz uses your GitHub account as a social login. Register for a free [StackBlitz](https://stackblitz.com) account by using your GitHub account.
-3. On StackBlitz's site, click **START A NEW APP** then select **Angular** to start a new Angular workspace. 
+3. On StackBlitz's site, click **START A NEW APP** then select **Angular** to start a new Angular workspace.
 
 You should see a page similar this:
 

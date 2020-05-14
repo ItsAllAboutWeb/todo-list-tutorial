@@ -8,15 +8,13 @@ Angular takes care of creating instances of the classes you define - if they are
 
 Each time you use a component in a template, a new instance of it is created. For example, here three instances of the InputButtonUnitComponent class will be created:
 
-{% code title="src/app/app.component.ts" %}
+{% code title="src/app/app.component.html" %}
 ```markup
 // example only
+  <app-input-button-unit></app-input-button-unit>
+  <app-input-button-unit></app-input-button-unit>
+  <app-input-button-unit></app-input-button-unit>
 
-template: `
-  <app-input-button-unit></app-input-button-unit>
-  <app-input-button-unit></app-input-button-unit>
-  <app-input-button-unit></app-input-button-unit>
-`,
 ```
 {% endcode %}
 
@@ -111,7 +109,7 @@ changeTitle(newTitle: string) {
 
 **Note:** Functions and Methods can return a value that can be used when the method is called. For example:
 
-{% code title="code for example" %}
+{% code title="// code for example" %}
 ```typescript
 function multiply (x: number, y: number) {
   return x * y;
@@ -154,24 +152,6 @@ changeTitle(newTitle: string) {
 {% endcode %}
 
 The browser's console is a part of its Dev Tools. You can see how to open the console in different browsers here: [https://webmasters.stackexchange.com/questions/8525/how-do-i-open-the-javascript-console-in-different-browsers](https://webmasters.stackexchange.com/questions/8525/how-do-i-open-the-javascript-console-in-different-browsers)
-
-{% hint style="info" %}
-💾 **Save your code to GitHub**
-
-StackBlitz users - press **Save** in the toolbar and continue to the next section of the tutorial.
-
-Commit all your changes by running this command in your project directory.
-
-```text
-git add -A && git commit -m "Your Message"
-```
-
-Push your changes to GitHub by running this command in your project directory.
-
-```text
-git push master
-```
-{% endhint %}
 
 {% hint style="success" %}
 [See the results on StackBlitz](https://stackblitz.com/github/ng-girls/todo-list-tutorial/tree/master/examples/05-class)

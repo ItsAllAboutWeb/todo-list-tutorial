@@ -18,7 +18,7 @@ Press the **Save** button on the toolbar to save your work.
 
 ---
 
-Let's take a look of what the StackBlitz Generator created for us.
+Let's take a look at what the StackBlitz Generator created for us.
 
 It created a new folder called `src/app/input-button-unit`. There are three files there:
 

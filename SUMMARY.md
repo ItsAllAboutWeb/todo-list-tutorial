@@ -10,7 +10,6 @@
 * [\#2: 🅰 Angular kicks in](workshop-todo-list/angular-kicks-in.md)
 * [\#3: 📐 Component](workshop-todo-list/component.md)
 * [\#4: ✏ A new component](workshop-todo-list/a-new-component/README.md)
-  * [a. StackBlitz instructions](workshop-todo-list/a-new-component/stackblitz.md)
 * [\#5: 💼 Class](workshop-todo-list/class.md)
 * [\#6: 📥 Property binding](workshop-todo-list/property-binding.md)
 * [\#7: 📤Event binding](workshop-todo-list/event-binding.md)

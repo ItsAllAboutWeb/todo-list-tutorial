@@ -11,7 +11,7 @@ We will look at:
 
 Let's go ahead and add a checkbox into our `todo-item.component.ts` file. Place the following code right before `{{ item.title }}`:
 
-{% code title="src/app/todo-item/todo-item.component.ts" %}
+{% code title="src/app/todo-item/todo-item.component.html" %}
 ```markup
 <input type="checkbox"/>
 ```
@@ -19,7 +19,7 @@ Let's go ahead and add a checkbox into our `todo-item.component.ts` file. Place 
 
 Now, in order for the checkbox to do anything, we need to add a `click` event handler which we will call `completeItem`. We'll also add a css-class and wrap the element and the interpolation together for styling. Let's do that now:
 
-{% code title="src/app/todo-item/todo-item.component.ts" %}
+{% code title="src/app/todo-item/todo-item.component.html" %}
 ```markup
 <div>
   <input type="checkbox"
@@ -75,7 +75,7 @@ And finally, add the CSS to our `todo-item.component.css` file:
 
 Next step is to tell the parent element list-manager what to do, when update event is emitted. In order to do so we have to bind update action and update method that will trigger a proper function in TodoListService. So we apply here:
 
-{% code title="src/app/list-manager/list-manager.component.ts" %}
+{% code title="src/app/list-manager/list-manager.component.html" %}
 ```markup
 <app-todo-item [item]="todoItem"
                (remove)="removeItem($event)"></app-todo-item>
@@ -85,7 +85,7 @@ Next step is to tell the parent element list-manager what to do, when update eve
 
 Next modifications:
 
-{% code title="src/app/list-manager/list-manager.component.ts" %}
+{% code title="src/app/list-manager/list-manager.component.html" %}
 ```markup
 <app-todo-item [item]="todoItem"
              (remove)="removeItem($event)"
@@ -105,24 +105,6 @@ updateItem(item, changes) {
 {% endcode %}
 
 Voila! Checking the checkbox should apply a line through the todo title, and unchecking the checkbox should remove the line.
-
-{% hint style="info" %}
-💾 **Save your code to GitHub**
-
-StackBlitz users - press **Save** in the toolbar and continue to the next section of the tutorial.
-
-Commit all your changes by running this command in your project directory.
-
-```text
-git add -A && git commit -m "Your Message"
-```
-
-Push your changes to GitHub by running this command in your project directory.
-
-```text
-git push master
-```
-{% endhint %}
 
 {% hint style="success" %}
 [See the results on StackBlitz](https://stackblitz.com/github/ng-girls/todo-list-tutorial/tree/master/examples/19-adding-a-checkbox)

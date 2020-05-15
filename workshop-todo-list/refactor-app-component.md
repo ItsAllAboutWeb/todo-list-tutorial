@@ -4,9 +4,7 @@ We're going to perform a small refactoring. The `app-root` shouldn't have such a
 
 * Create a new component called `list-manager`: 
 
-```bash
-ng g c list-manager
-```
+
 
 {% hint style="info" %}
 **StackBlitz Instructions** ![](../.gitbook/assets/stackblitz-hint.svg)

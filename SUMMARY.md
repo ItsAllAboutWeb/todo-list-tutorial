@@ -31,11 +31,7 @@
 * [\#17: 💾Local storage](workshop-todo-list/local-storage.md)
 * [\#18: 🗑 Remove item](workshop-todo-list/remove-item.md)
 * [\#19: 🔘 Adding a checkbox](workshop-todo-list/adding-a-checkbox.md)
-* [\#20: 🛰 Deploy to GitHub Pages](workshop-todo-list/deploy-to-github-pages/README.md)
-  * [a. StackBlitz instructions](workshop-todo-list/deploy-to-github-pages/stackblitz.md)
-* [\#21: 💪 Enrich the todo-item component](workshop-todo-list/enrich-the-todo-item-component.md)
-* [Appendix 1: Generating a new project](workshop-todo-list/appendix-1-generating-a-new-project.md)
-* [Appendix 2: Tutorial Extensions](workshop-todo-list/appendix-2-tutorial-extensions.md)
+* [\#20: 💪 Enrich the todo-item component](workshop-todo-list/enrich-the-todo-item-component.md)
 * [Troubleshooting](workshop-todo-list/troubleshooting/README.md)
   * [Installation](workshop-todo-list/troubleshooting/installation.md)
 

@@ -6,13 +6,9 @@ We still don't have a whole list to show, but at the moment we will use another 
 
 The `input-button-unit` component should look like this:
 
-{% code title="src/app/input-button-unit/input-button-unit.component.ts" %}
 ```typescript
-import { Component, OnInit } from '@angular/core';
+src/app/input-button-unit/input-button-unit.component.html
 
-@Component({
-  selector: 'app-input-button-unit',
-  template: `
     <p>
       input-button-unit works!
       The title is: {{ title }}
@@ -20,7 +16,15 @@ import { Component, OnInit } from '@angular/core';
 
     <input [value]="title">
     <button>Save</button>
-  `,
+```
+
+{% code title="src/app/input-button-unit/input-button-unit.component.ts" %}
+```typescript
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-input-button-unit',
+  templateuUrl: './input-button-unit.component.html',
   styleUrls: ['./input-button-unit.component.css']
 })
 export class InputButtonUnitComponent implements OnInit {
@@ -52,9 +56,8 @@ Just like binding to element properties, we can bind to events that are emitted 
 
 Let's try a simple example, where the title is changed when the user clicks on the button. Notice the parenthesis around `click`. \(We also change the binding of the input's value back to `title`.\)
 
-{% code title="src/app/input-button-unit/input-button-unit.component.ts" %}
+{% code title="src/app/input-button-unit/input-button-unit.component.html" %}
 ```markup
-template: `
   <p>
     input-button-unit works!
     The title is: {{ title }}
@@ -64,7 +67,7 @@ template: `
   <button (click)="changeTitle('Button Clicked!')">
     Save
   </button>
-`,
+,
 ```
 {% endcode %}
 
@@ -82,7 +85,7 @@ In the next chapter we will learn how to use properties of one element in anothe
 
 When the user types, keyboard events are emitted. For example `keydown` and `keyup`. We will catch the `keyup` event \(when the pressed key is released\) and change the title:
 
-{% code title="src/app/input-button-unit/input-button-unit.component.ts" %}
+{% code title="src/app/input-button-unit/input-button-unit.component.html" %}
 ```markup
 <input [value]="title" (keyup)="changeTitle('Button Clicked!')">
 ```
@@ -92,7 +95,7 @@ Now when the user types in the input box, the title is changed to "Button Clicke
 
 **Tip:** When an element becomes long due to its attributes, you should make it easier on the eye by splitting it into several lines:
 
-{% code title="src/app/input-button-unit/input-button-unit.component.ts" %}
+{% code title="src/app/input-button-unit/input-button-unit.component.html" %}
 ```markup
 <input [value]="title"
        (keyup)="changeTitle('Button Clicked!')">
@@ -144,7 +147,7 @@ changeTitle(event): void {
 
 Now change the argument you're passing in the template, to pass the whole `$event`:
 
-{% code title="src/app/input-button-unit/input-button-unit.component.ts" %}
+{% code title="src/app/input-button-unit/input-button-unit.component.html" %}
 ```markup
 <input [value]="title"
        (keyup.enter)="changeTitle($event)">
@@ -155,13 +158,9 @@ Try it out!
 
 **Don't forget to change back the code before we go on!**
 
-{% code title="src/app/input-button-unit/input-button-unit.component.ts" %}
 ```typescript
-import { Component, OnInit } from '@angular/core';
+src/app/input-button-unit/input-button-unit.component.html
 
-@Component({
-  selector: 'app-input-button-unit',
-  template: `
     <p>
       input-button-unit works!
       The title is: {{ title }}
@@ -173,7 +172,15 @@ import { Component, OnInit } from '@angular/core';
     <button (click)="changeTitle('Button Clicked!')">
       Save
     </button>
-  `,
+```
+
+{% code title="src/app/input-button-unit/input-button-unit.component.ts" %}
+```typescript
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-input-button-unit',
+  templateUrl: './input-button-unit.component.html',
   styleUrls: ['./input-button-unit.component.css']
 })
 export class InputButtonUnitComponent implements OnInit {
@@ -190,24 +197,6 @@ export class InputButtonUnitComponent implements OnInit {
 }
 ```
 {% endcode %}
-
-{% hint style="info" %}
-💾 **Save your code to GitHub**
-
-StackBlitz users - press **Save** in the toolbar and continue to the next section of the tutorial.
-
-Commit all your changes by running this command in your project directory.
-
-```text
-git add -A && git commit -m "Your Message"
-```
-
-Push your changes to GitHub by running this command in your project directory.
-
-```text
-git push master
-```
-{% endhint %}
 
 {% hint style="success" %}
 [See the results on StackBlitz](https://stackblitz.com/github/ng-girls/todo-list-tutorial/tree/master/examples/07-event-binding)

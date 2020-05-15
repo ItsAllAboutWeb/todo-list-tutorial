@@ -8,9 +8,8 @@ First, we need to add the button to the item, so we'll work on the file `todo-it
 
 Add a "remove" button to the item template, with a `click` event handler that calls a `removeItem` method \(which we'll create in a moment\):
 
-{% code title="src/app/todo-item/todo-item.component.ts" %}
+{% code title="src/app/todo-item/todo-item.component.html" %}
 ```markup
-template: `
   <div class="todo-item">
     {{ item.title }}
 
@@ -18,7 +17,7 @@ template: `
       remove
     </button>
   </div>
-`,
+
 ```
 {% endcode %}
 
@@ -52,7 +51,7 @@ Now that each todo item can emit its own removal, let's make sure that the list 
 
 We need to respond to the `remove` event. Let's add it to the template, inside the `<todo-item>` tag:
 
-{% code title="src/app/list-manager/list-manager.component.ts" %}
+{% code title="src/app/list-manager/list-manager.component.html" %}
 ```markup
 <app-todo-item [item]="todoItem"
                (remove)="removeItem($event)"></app-todo-item>
@@ -68,24 +67,6 @@ removeItem(item) {
 }
 ```
 {% endcode %}
-
-{% hint style="info" %}
-💾 **Save your code to GitHub**
-
-StackBlitz users - press **Save** in the toolbar and continue to the next section of the tutorial.
-
-Commit all your changes by running this command in your project directory.
-
-```text
-git add -A && git commit -m "Your Message"
-```
-
-Push your changes to GitHub by running this command in your project directory.
-
-```text
-git push master
-```
-{% endhint %}
 
 {% hint style="success" %}
 [See the results on StackBlitz](https://stackblitz.com/github/ng-girls/todo-list-tutorial/tree/master/examples/18-remove-item)

@@ -6,14 +6,6 @@ We want to use TypeScript's abilities to know what kind of object we pass as an 
 >
 > Interfaces exist only in TypeScript and are removed when the code is compiled to JavaScript. In JavaScript we cannot enforce type safety out of the box.
 
-Create a `TodoItem` interface in a new `interfaces` folder with the Angular CLI:
-
-```bash
-ng g i interfaces/todo-item
-```
-
-`i` is short for... you guessed it - interface. Adding a path in the command to the Angular CLI generates the folders you specified if they do not already exist.
-
 {% hint style="info" %}
 **StackBlitz Instructions** ![](../../.gitbook/assets/stackblitz-hint.svg)
 
@@ -87,24 +79,6 @@ import { TodoItem } from './interfaces/todo-item';
 {% endcode %}
 
 Now try to delete the title of one of the objects in the list. What happens?
-
-{% hint style="info" %}
-💾 **Save your code to GitHub**
-
-StackBlitz users - press **Save** in the toolbar and continue to the next section of the tutorial.
-
-Commit all your changes by running this command in your project directory.
-
-```text
-git add -A && git commit -m "Your Message"
-```
-
-Push your changes to GitHub by running this command in your project directory.
-
-```text
-git push master
-```
-{% endhint %}
 
 {% hint style="success" %}
 [See the results on StackBlitz](https://stackblitz.com/github/ng-girls/todo-list-tutorial/tree/master/examples/11-interface)

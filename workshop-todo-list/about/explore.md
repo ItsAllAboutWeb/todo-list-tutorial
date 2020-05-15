@@ -4,7 +4,7 @@ Just like we did in the previous chapter, when we logged $event, you can do the 
 
 **Playground:** Change the method `changeTitle` so it will receive the whole element reference and log it to the console:
 
-{% code title="src/app/input-button-unit/input-button-unit.component.ts" %}
+{% code title="src/app/input-button-unit/input-button-unit.component.html" %}
 ```markup
 <input #inputElementRef
        [value]="title"              

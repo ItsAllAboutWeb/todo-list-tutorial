@@ -19,7 +19,7 @@ First, in order to use local storage, we can simply access a `localStorage` inst
 
 Local storage stores data as keys and values, and the interface is quite simple. It has two main methods: `getItem` and `setItem`. Here's an example of using them:
 
-{% code title="code for example" %}
+{% code title="// code for example" %}
 ```typescript
 localStorage.setItem('name', 'Angular');
 
@@ -30,7 +30,7 @@ alert(`Hello ${ name }!`);
 
 Another useful method is `clear`. It's used to clear all the data from local storage:
 
-{% code title="code for example" %}
+{% code title="// code for example" %}
 ```typescript
 localStorage.clear();
 ```

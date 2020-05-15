@@ -10,7 +10,7 @@ To get your development environment going, follow these steps:
 
 You should see a page similar this:
 
-![Initial App](https://github.com/ng-girls/todo-list-tutorial/raw/stackblitz/assets/initial-app-stackblitz.png)
+![Initial App](../../.gitbook/assets/initial-app-stackblitz.png)
 
 StackBlitz is an online editor that provides all the functionality of an online **IDE** by bundling **Visual Studio Code**, the **Angular CLI**, and a preview mode of your application together.
 

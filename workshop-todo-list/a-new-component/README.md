@@ -2,6 +2,8 @@
 
 In this chapter we will write a whole new component. It will allow us to add an item to the todo list. It will be composed of the HTML elements `input` and `button`. We will call it Input-Button-Unit.
 
+## Instructions to generate a component
+
 We'll use the StackBlitz's Angular Generator to create the component.
 
 Right click on the `app` folder and select **Angular Generator**, then select **Component**.
@@ -16,7 +18,7 @@ You now have a new component!
 
 Press the **Save** button on the toolbar to save your work.
 
----
+## Breakdown what was generated
 
 Let's take a look at what the StackBlitz Generator created for us.
 

@@ -226,11 +226,13 @@ Finally, add the following style to `todo-item.component.scss`:
 
 Wrap the content of the `todo-item` component with a `div` element with the `todo-item` class:
 
+{% code title="src/app/todo-item/todo-item.component.html" %}
 ```markup
 <div class="todo-item">
   {{ item.title }}
 </div>
 ```
+{% endcode %}
 
 We'll use the `todo-checkbox` and `todo-title` classes later on.
 

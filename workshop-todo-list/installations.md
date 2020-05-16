@@ -10,7 +10,7 @@ To get your development environment going, follow these steps:
 
 You should see a page similar this:
 
-![Initial App](../../assets/initial-app-stackblitz.png)
+![Initial App](../.gitbook/assets/initial-app-stackblitz.png)
 
 StackBlitz is an online editor that provides all the functionality of an online **IDE** by bundling **Visual Studio Code**, the **Angular CLI**, and a preview mode of your application together.
 
@@ -18,7 +18,7 @@ We want to use the starter application for ngGirls. Open the [ngGirls tutorial s
 
 ## Using StackBlitz for the tutorial
 
-Most of the steps in this tutorial are the same for local development and online development, but if there's a difference, we'll draw attention to your online editor instructions. You'll see an info panel labeled ![](../../.gitbook/assets/stackblitz-hint.svg) **StackBlitz Instructions**.
+Most of the steps in this tutorial are the same for local development and online development, but if there's a difference, we'll draw attention to your online editor instructions. You'll see an info panel labeled ![](../.gitbook/assets/stackblitz-hint.svg) **StackBlitz Instructions**.
 
 **You do not have a terminal to run Angular CLI commands**. StackBlitz supports Angular CLI commands in the user interface. Whenever you see instructions to type a command in the terminal, you will see a StackBlitz instruction info panel to walk you through that command.
 

@@ -8,11 +8,11 @@ We'll use the StackBlitz's Angular Generator to create the component.
 
 Right click on the `app` folder and select **Angular Generator**, then select **Component**.
 
-![StackBlitz Angular Generator](../../.gitbook/assets/stackblitz-generator.png)
+![StackBlitz Angular Generator](../.gitbook/assets/stackblitz-generator.png)
 
 A small text input box displays at the top of the middle editor pane. Type `input-button-unit` to create the component.
 
-![Input component name](../../.gitbook/assets/stackblitz-component-name.png)
+![Input component name](../.gitbook/assets/stackblitz-component-name.png)
 
 You now have a new component!
 
@@ -97,10 +97,8 @@ Great job adding your first component! Let's save your work to GitHub, an online
 You might wonder why we're saving to GitHub now. Saving coding work in progress to an accessible code repository is a software development good practice. Doing so also allows mentors to better assist you with this step and as we work through the tutorial. We want for you to be able to continue working on the tutorial if you run out of time during the workshop.
 
 {% hint style="info" %}
-**StackBlitz Instructions** ![](../../.gitbook/assets/stackblitz-hint.svg)
+**StackBlitz Instructions** ![](../.gitbook/assets/stackblitz-hint.svg)
 
 We will save code within StackBlitz so you can skip the GitHub sections below. Save your work in progress by pressing **Save** in the toolbar.
 {% endhint %}
-
-
 

@@ -1,3 +1,5 @@
+# \#8: 📎 Element ref - \#
+
 In the last chapter, we ended with our input component able to display and change the title of our todo item. `input-button-unit.component.ts/html` should look like this:
 
 ```markup
@@ -66,7 +68,6 @@ Angular helps us do exactly that. **We can store a reference to the element we w
   <button (click)="changeTitle(inputElementRef.value)">
     Save
   </button>
-
 ```
 {% endcode %}
 

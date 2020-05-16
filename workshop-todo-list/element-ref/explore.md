@@ -1,4 +1,4 @@
-# b. Explore
+# a. Explore
 
 Just like we did in the previous chapter, when we logged $event, you can do the same with `#inputElementRef`.
 
